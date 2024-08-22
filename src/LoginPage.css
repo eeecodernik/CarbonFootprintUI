@@ -1,0 +1,83 @@
+/* Center the login page on the screen */
+.login-page {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* background-color: #cbcbcb; */
+    margin-top: 100px; /* Adjust top margin for centering */
+  }
+  
+  /* Style the form header */
+  .login-page h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Style form groups */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Style labels */
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Style input fields */
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding is included in width */
+  }
+  
+  /* Style buttons */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+  
+  /* Style success and error messages */
+  .success-text {
+    color: #28a745; /* Green color for success */
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .error-text {
+    color: #dc3545; /* Red color for error */
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  /* Add some responsiveness */
+  @media (max-width: 600px) {
+    .login-page {
+      padding: 10px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }
+  
