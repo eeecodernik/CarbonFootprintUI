@@ -1,9 +1,9 @@
 // services/profileService.js
-const API_URL = 'http://192.168.226.159:8081/api/trip'; // Replace with your API endpoint
+const API_URL = 'http://localhost:8081/api/trip'; // Replace with your API endpoint
 
-const pythonURL = 'http://192.168.226.159:5000/extract-info'
+const pythonURL = 'http://localhost:5000/extract-info'
 // const pythonURL = 'http://192.168.226.67:5000/extract-info'
-export const postProfileData = async (data) => {
+export const postProfileData = async (file) => {
   try {
 
     const response = await fetch(API_URL, {
@@ -11,7 +11,7 @@ export const postProfileData = async (data) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(file),
     });
 
     if (!response.ok) {
@@ -26,12 +26,12 @@ export const postProfileData = async (data) => {
 };
 
 
-export const postPython = async (data) => {
+export const postPython = async (file) => {
     try {
       const response = await fetch(pythonURL, {
         method: 'POST',
         
-        body: data
+        body: file
       });
   
       if (!response.ok) {

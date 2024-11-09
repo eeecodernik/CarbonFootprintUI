@@ -1,4 +1,4 @@
-const APIURL = "http://192.168.226.159:8081/api/board";
+const APIURL = "http://localhost:8081/api/board";
 
 export const getLeaderBoard = async (data) => {
     try {
